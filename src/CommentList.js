@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-
+import Comment from './Comment'
 class CommentList extends Component {
   render () {
     return (
-      <p>coucou list</p>
+      <div className="commentList">
+        <Comment author="Daniel Lo Nigro">Hello ReactJS.NET World!</Comment>
+        <Comment author="Pete Hunt">This is one comment</Comment>
+        <Comment author="Jordan Walke">This is *another* comment</Comment>
+      </div>
     )
   }
 }
