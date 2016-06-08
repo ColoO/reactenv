@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Comment extends Component {
   render () {
-     var converter = new Showdown.converter();
+     var converter = new showdown.Converter();
     return (
       <div className="comment">
         <h2 className="commentAuthor">
