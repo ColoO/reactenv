@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-
+import showdown from 'showdown'
 class Comment extends Component {
   render () {
-     var converter = new showdown.Converter();
+     const converter = new showdown.Converter();
     return (
       <div className="comment">
         <h2 className="commentAuthor">
