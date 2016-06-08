@@ -1,0 +1,50 @@
+﻿http://reactjs.net/getting-started/tutorial.html
+#COMMIT
+#creer un projet
+git init
+#ajouter un fichier pour commid
+git add
+git add -all #ou .
+git add *.html
+#commit
+git commit
+git commit -m "mon message"
+git commit -am "mon message" #commit des fichiers modifiés
+#voir l'état du git
+git status
+#log
+git log
+
+
+#REVENIR en ARRIERE
+#retour passé / modif impossible
+git checkout . effacé modif
+git checkout clésha1
+git checkout master  #revenir branche master
+git checkout clésha1 fichier # récupère la version du fichier
+git revert clésha1 #défaire un commit
+git reset clésha1 #supprime tous les commit avant
+git reset #vide le staging
+git reset --hard #revient au commit précédent
+
+Branche
+#créer branche
+git branch nomBranche
+git branch -d nomBranche #supprimer branche
+git checkout nomBranche #sauter de branche en branche
+
+Manipuler historique
+git commit --amen #modifier commit precedent et ajoute modif fait
+git rebase #envoyer commit 2eme branche sur la branche master
+
+rebase
+git stash (met en memoire les modifications non commit)
+git stash list
+git stash apply #ou# git stash pop
+git stash drop
+gi stash save Name
+
+git remot #rajouter remote
+git pull origin master #récupérer  les donnée server
+git push # envoyé sur branche origin
+git clone #cloné le projet
