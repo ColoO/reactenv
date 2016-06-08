@@ -5,8 +5,8 @@ class CommentForm extends Component {
   render () {
 
     return (
- <p>coucou form</p>
-      )
+      <p>coucou form</p>
+    )
   }
 
 }
