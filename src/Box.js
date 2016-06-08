@@ -8,10 +8,11 @@ class Box extends Component {
       background: 'cyan',
       border: '2px solid'
     }
+    const name= 'seb'
 
     return (
       <div style={boxStyle}>
-        {'Box'}
+        {'Box'} {name}
       </div>
     )
   }
