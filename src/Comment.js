@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
-import Markdown  from 'react-remarkable'
-class Comment extends Component {
-  render () {
-  const md = new Markdown();
-     return (
-       <div className="comment">
-         <h2 className="commentAuthor">
-           {this.props.author}
-         </h2>
+import Remarkable  from 'remarkable'
 
-        <Markdown>  {this.props.children.toString()}</Markdown>
+var Comment = React.createClass({
+  rawMarkup: function() {
+    let md = new Remarkable();
+    let rawMarkup = md.render(this.props.children.toString());
+    return { __html: rawMarkup };
+  },
 
-       </div>
-    )
+  render: function() {
+    return (
+      <div className="comment">
+        <h2 className="commentAuthor">
+          {this.props.author}
+        </h2>
+        <span dangerouslySetInnerHTML={this.rawMarkup()} />
+      </div>
+    );
   }
-}
+});
 export default Comment
