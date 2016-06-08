@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
-import showdown from 'showdown'
+import Markdown  from 'react-remarkable'
 class Comment extends Component {
   render () {
-     const converter = new showdown.Converter();
-     const rawMarkup = converter.makeHtml(this.props.children.toString());
-    return (
-      <div className="comment">
-        <h2 className="commentAuthor">
-          {this.props.author}
-        </h2>
-        <span dangerouslySetInnerHTML={{__html: rawMarkup}} />
-      </div>
+  const md = new Markdown();
+     return (
+       <div className="comment">
+         <h2 className="commentAuthor">
+           {this.props.author}
+         </h2>
+
+        <Markdown>  {this.props.children.toString()}</Markdown>
+
+       </div>
     )
   }
 }

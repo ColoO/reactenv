@@ -7,9 +7,9 @@ export default class App extends Component {
   render() {
     return (
       <h1>
-        Hello, world.
+        Hello, worl.
         <Box />
-        <CommentBox data={data} />
+       <CommentBox /> 
       </h1>
     );
   }

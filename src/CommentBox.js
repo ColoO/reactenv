@@ -10,7 +10,7 @@ class CommentBox extends Component {
     return (
         <div className="commentBox">
           <h1>Comment</h1>
-          <CommentList data={this.props.data} />
+        <CommentList  />
           <CommentForm />
         </div>
       )
