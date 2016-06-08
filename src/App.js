@@ -9,7 +9,7 @@ export default class App extends Component {
       <h1>
         Hello, world.
         <Box />
-        <CommentBox />
+        <CommentBox data={data} />
       </h1>
     );
   }
