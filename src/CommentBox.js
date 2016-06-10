@@ -40,14 +40,14 @@ class CommentBox extends Component {
 
   componentDidMount () {
     this.loadCommentsFromServer()
-    setInterval(this.loadCommentsFromServer, this.props.pollInterval)
+    setInterval(this.loadCommentsFromServer.bind(this), this.props.pollInterval)
   }
   render () {
     return (
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
-        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+        <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
       </div>
     )
   }
